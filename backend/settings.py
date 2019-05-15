@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_auth',
     'shopping',
     'corsheaders',
 ]
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Cors settings
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:4200',
+    'http://localhost:4200',
 )
 
 # REST Framework settings
@@ -95,6 +96,8 @@ REST_FRAMEWORK = {
 }
 
 # JWT settings
+
+REST_USE_JWT = True
 
 JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
