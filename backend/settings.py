@@ -35,13 +35,22 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
+
     'rest_framework',
+
+    'allauth',
+    'allauth.account',
+
     'rest_auth',
-    'shopping',
+    'rest_auth.registration',
+
     'corsheaders',
+
+    'shopping',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +89,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
 )
+
+# allauth
+
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # REST Framework settings
 
